@@ -1,2 +1,2 @@
 # helper
-Some of my own helper scripts
+Some of my own helper scripts used for BIG data in cloudera hadoop cluster with elastic ...
