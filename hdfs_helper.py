@@ -108,7 +108,6 @@ def hdfs_cp(src, target):
 
 def hdfs_mkdirs(path_):
     """
-    Not tested but it is to make a directory
     :param path_: new directory path
     :return: True  or False
     """
@@ -118,6 +117,7 @@ def hdfs_mkdirs(path_):
 def hdfs_delete(path_):
     """
     To Delete file in hdfs
+    Known issue: the file is not deleted to user's .Trash ****
     :param path_: path of file to delete
     :return: True or  False
     """
