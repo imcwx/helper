@@ -95,5 +95,5 @@ def init_elastic():
 
 
 if __name__ == '__main__':
-    module_name = 'oc_blah_blah_blah'
+    module_name = 'blah_blah_blah'
     init_elastic()
