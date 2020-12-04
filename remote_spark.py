@@ -86,7 +86,36 @@ def test_spark_session():
     sample_df(enrichment_schema, True).show(truncate=False)
 
 
+def test_tensorflow():
+    import tensorflow as tf
+
+    # Simple hello world using TensorFlow
+
+    # Create a Constant op
+    # The op is added as a node to the default graph.
+    #
+    # The value returned by the constructor represents the output
+    # of the Constant op.
+    hello = tf.constant('Hello, TensorFlow!')
+
+    # Start tf session
+    sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+
+    # Run the op
+    print(sess.run(hello))
+
+    # Creates a graph.
+    a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+    b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+    c = tf.matmul(a, b)
+    # Creates a session with log_device_placement set to True.
+    sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+    # Runs the op.
+    print(sess.run(c))
+
+
 test_spark_session()
+test_tensorflow()
 
 #### Log python and spark version
 print("python version : {}".format(sys.version))
